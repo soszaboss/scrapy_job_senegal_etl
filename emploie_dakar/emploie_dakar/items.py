@@ -8,5 +8,13 @@ import scrapy
 
 class EmploieDakarItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    intitule_offre = scrapy.Field(serialize=str)
+    competences = scrapy.Field(serialize=str)
+    region = scrapy.Field(serialize=str)
+    type_offre = scrapy.Field(serialize=str)
+    date_publication = scrapy.Field()
+    detail_offre = scrapy.Field(serialize=str)
+    referenciel = scrapy.Field(serialize=str)
+    entreprise = scrapy.Field(serialize=str)
+    email_rh = scrapy.Field()
+    url_offre = scrapy.Field()

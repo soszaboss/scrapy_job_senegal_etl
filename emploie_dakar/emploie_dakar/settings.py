@@ -12,12 +12,16 @@ BOT_NAME = "emploie_dakar"
 SPIDER_MODULES = ["emploie_dakar.spiders"]
 NEWSPIDER_MODULE = "emploie_dakar.spiders"
 
+# sauvegarde des données sous format csv et sans ecraser les données précédant
+FEEDS = {
+   "job_offers.csv": {"format": "csv", "overwrite": False},
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "emploie_dakar (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -62,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "emploie_dakar.pipelines.EmploieDakarPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    "emploie_dakar.pipelines.EmploieDakarPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
