@@ -3,7 +3,7 @@ from scraperapi_sdk import ScraperAPIClient
 from emploie_dakar.items import EmploieDakarItem
 
 
-APIKEY = 'd611abc6c8a18e9859cfbd0d65db9721'
+APIKEY = ''
 
 def get_proxy_url(url:str):
     return f'http://api.scraperapi.com/?api_key={APIKEY}&url={url}'
